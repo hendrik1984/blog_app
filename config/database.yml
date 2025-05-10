@@ -108,3 +108,7 @@ production:
   cable:
     adapter: postresql
     url: <%= ENV['CABLE'] %>
+  
+  cache:
+    <<: *default
+    database: <%= 'blog_app_cache_production' %>

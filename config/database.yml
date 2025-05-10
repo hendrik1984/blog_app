@@ -104,11 +104,3 @@ production:
   host: <%= ENV['RDS_HOSTNAME'] %>
   port: <%= ENV['RDS_PORT'] || 5432 %>
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-
-  cable:
-    adapter: postresql
-    url: <%= ENV['CABLE'] %>
-  
-  cache:
-    <<: *default
-    database: <%= 'blog_app_cache_production' %>

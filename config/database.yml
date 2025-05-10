@@ -99,7 +99,7 @@ test:
 production:
   <<: *default
   database: blog_app_production
-  username: <%= ENV['RDS_USERNAME']
-  password: <%= ENV['RDS_PASSWORD']
-  host: <%= ENV['RDS_HOSTNAME']
-  port: <%= ENV['RDS_PORT']
+  username: <%= ENV['RDS_USERNAME'] %>
+  password: <%= ENV['RDS_PASSWORD'] %>
+  host: <%= ENV['RDS_HOSTNAME'] %>
+  port: <%= ENV['RDS_PORT'] || 5432 %>
